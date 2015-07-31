@@ -9,7 +9,7 @@ The simulated creatures live in a rectangular grid, and there are discrete time 
 **This project is in early alpha stage, there is no code yet.**
 
 
-The Creatures
+Creatures and Other Simulated Objects
 ================================================================================
 
 There are three types of creatures: plants, herbivores and carnivores. Additionally there are obstacles.
@@ -21,19 +21,22 @@ Plants appear randomly at a certain rate during the simulation. The region where
 
 By eating plants herbivores gain a certain amount of energy. Plants are the source of energy for all life in the simulation.
 
-Herbivores
+
+Animals
 --------------------------------------------------------------------------------
 
-Herbivores eat plants to gain energy. They lose a certain amount of energy at each time step. When their energy reaches zero they die.
+Animals are the main subject of the simulation. They can see, smell, turn, move, eat and procreate. Their behavior is controlled by their brains.
 
-Herbivores can see, smell, turn and move. Their behavior is controlled by their brains.
+Animals must eat to gain energy. They loose energy with each step of time, and die when their energy drops to zero. When an animal's energy reaches a certain level they procreate.
 
-Carnivores
---------------------------------------------------------------------------------
+There are two types of animals:
 
-Carnivores eat herbivores to gain energy. Like herbivores they lose a certain amount of energy at each time step. When their energy reaches zero they die.
+Herbivores: 
+    Herbivores eat plants to gain energy. 
 
-Carnivores can see, smell, turn and move. Their behavior is controlled by their brains.
+Carnivores:
+    Carnivores eat herbivores to gain energy. 
+
 
 Obstacles
 --------------------------------------------------------------------------------
@@ -41,13 +44,20 @@ Obstacles
 Obstacles are placed in the grid prior to the simulation. Animals can not cross obstacles.
 
 
-Visual Sense
+Brain
 ================================================================================
 
-All animals can view one or more fields straight ahead. The visual sense tells the distance of the viewed object, but not the exact direction. The view covers a triangular area, 45° wide. By turning 8 times the animal can look around.
+All animals have a brain, that controls their actions. The brain contains a short program, that is modified randomly when the animal procreates.
 
+The brain contains a series of "if" statements that are all evaluated at each time step. 
+
+Visual Sense
+--------------------------------------------------------------------------------
+
+All animals can view one or more fields straight ahead. The visual sense tells the distance of the viewed object, but not the (exact) direction. The view covers a triangular area, 45° wide. By turning 8 times the animal can look around.
 
 Smell
-================================================================================
+--------------------------------------------------------------------------------
 
-All animals have a sense of smell, which is undirected (covers 360°) but tells the approximate distance. 
+All animals have a sense of smell, that tells them the distance and number of other creatures, but not the direction. 
+
