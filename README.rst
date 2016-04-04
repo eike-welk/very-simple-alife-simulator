@@ -61,3 +61,7 @@ Smell
 
 All animals have a sense of smell, that tells them the distance and number of other creatures, but not the direction. 
 
+Pain
+--------------------------------------------------------------------------------
+
+All animals a have a sense of pain, that tells them the direction and strength of an attack against them.
